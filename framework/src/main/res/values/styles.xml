@@ -1,0 +1,241 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/bg_gray_light</item>
+        <item name="android:colorBackground">@color/bg_gray_light</item>
+        <item name="colorControlNormal">@color/bg_line</item>
+        <item name="android:actionBarStyle">@style/toolbarTheme</item>
+        <item name="android:colorForeground">@color/commom_white</item>
+    </style>
+
+    <style name="AppTheme.Light" parent="@style/AppTheme">
+        <!--<item name="android:windowTranslucentNavigation" tools:targetApi="kitkat">true</item>-->
+        <item name="android:windowTranslucentStatus" tools:targetApi="kitkat">true</item>
+    </style>
+
+    <style name="AppTheme.Launcher" parent="AppTheme">
+        <item name="android:windowBackground">@drawable/launch_image</item>
+    </style>
+
+    <style name="toolbar">
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:theme">@style/toolbarTheme</item>
+    </style>
+    //textview
+
+    <style name="text_title">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_size_2xm</item>
+        <item name="android:textColor">@color/commom_white</item>
+    </style>
+
+    <style name="text_withbackground" parent="text_title">
+        <item name="android:textSize">@dimen/text_size_xl</item>
+        <item name="android:background">@drawable/radiu_gray_light</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:layout_width">@dimen/width_8xm</item>
+        <item name="android:layout_height">@dimen/height_8xm</item>
+    </style>
+
+    <style name="text_toolbar">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_size_2xm</item>
+        <item name="android:textColor">@color/commom_white</item>
+    </style>
+
+    <style name="text_tab">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">@dimen/text_size_m</item>
+        <item name="android:textColor">@color/commom_white</item>
+    </style>
+
+    <style name="text_commom">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_size_m</item>
+        <item name="android:textColor">@color/text_primary</item>
+    </style>
+
+    <style name="text_commom_gray" parent="text_commom">
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:textSize">@dimen/text_size_m</item>
+    </style>
+
+    <style name="text_explain">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_size_s</item>
+        <item name="android:textColor">@color/text_explain</item>
+    </style>
+
+    <style name="text_explain_deep" parent="text_explain">
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+    <style name="text_explain_mini" parent="text_explain">
+        <item name="android:textSize">@dimen/text_size_2xs</item>
+    </style>
+
+    <style name="text_tip" parent="text_explain">
+        <item name="android:textColor">@color/commom_white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/text_size_s</item>
+        <item name="android:paddingLeft">@dimen/margin_xs</item>
+        <item name="android:paddingRight">@dimen/margin_xs</item>
+        <item name="android:layout_height">@dimen/height_m</item>
+    </style>
+
+    //edittext
+
+    <style name="edit_text">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_size_m</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textColorHint">@color/text_explain</item>
+    </style>
+
+    <style name="text_star_red">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/commom_red</item>
+        <item name="android:text">*</item>
+    </style>
+    //editview
+
+    <style name="edit_line" parent="edit_text">
+        <item name="android:singleLine">false</item>
+    </style>
+
+    <style name="edit_line_center" parent="edit_line">
+        <item name="android:singleLine">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:inputType">numberDecimal</item>
+    </style>
+
+    <style name="edit_noline" parent="edit_text">
+        <item name="android:singleLine">false</item>
+        <item name="android:background">@null</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">top</item>
+        <item name="android:textSize">@dimen/text_size_m</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="edit_login" parent="edit_noline">
+        <item name="android:singleLine">true</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    //button
+
+    <style name="button_commom">
+        <item name="android:textSize">@dimen/text_size_s</item>
+        <item name="android:layout_height">@dimen/height_2xm</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/commom_white</item>
+        <item name="android:background">@drawable/button_commom</item>
+    </style>
+
+    <style name="button_bottom" parent="button_commom">
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:background">@color/colorPrimary</item>
+    </style>
+    //容器
+
+    <style name="LinearLayout_commom">
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:paddingLeft">@dimen/margin_s</item>
+        <item name="android:paddingRight">@dimen/margin_s</item>
+        <item name="android:background">@drawable/bg_strok_both</item>
+    </style>
+
+    <style name="LinearLayout_login" parent="LinearLayout_commom">
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingRight">0dp</item>
+        <item name="android:background">@drawable/bg_strok</item>
+    </style>
+
+    <style name="RelativeLayout_login">
+        <item name="android:layout_height">@dimen/height_3xm</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">@dimen/margin_xs</item>
+        <item name="android:paddingRight">@dimen/margin_xs</item>
+    </style>
+
+    <style name="RelativeLayout_s">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/height_3xm</item>
+    </style>
+
+    <style name="RelativeLayout_l" parent="RelativeLayout_s">
+        <item name="android:layout_height">@dimen/height_6xm</item>
+    </style>
+
+    //special bar
+
+    <style name="toolbarTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+        <item name="actionMenuTextColor">@color/commom_white</item>
+        <item name="android:textSize">@dimen/text_size_m</item>
+    </style>
+
+    <style name="actionbar_base">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="tv_ripple_listitem" parent="tv_ripple">//列表引用文本
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_marginLeft">@dimen/margin_m</item>
+    </style>
+
+    <style name="tv_ripple">//带波纹效果的文本
+        <item name="android:textSize">@dimen/text_size_m</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
+    </style>
+
+    <style name="tv_remind">//标注性文本
+        <item name="android:layout_marginTop">@dimen/margin_s</item>
+        <item name="android:layout_marginBottom">@dimen/margin_s</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">?android:textColorSecondary</item>
+        <item name="android:textSize">@dimen/text_size_2xs</item>
+    </style>
+
+    <style name="iv_bottom">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/margin_m</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
+    <style name="tv_ripple_bottom" parent="tv_ripple">
+        <item name="android:textColor">@color/commom_white</item>
+        <item name="android:layout_marginLeft">@dimen/margin_m</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+</resources>

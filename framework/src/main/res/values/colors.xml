@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3cacf6</color>
+    <color name="colorPrimaryDark">#3cacf6</color>
+    <color name="colorAccent">#6bc4ff</color>
+    <color name="colorAcent_half">#2e6bc4ff</color>
+    <color name="windousBackground">#f9f9f9</color>
+
+    <color name="text_primary">#333333</color>
+    <color name="text_secondary">#666666</color>
+    <color name="text_explain">#bcbcbc</color>
+    <color name="text_gray">#999999</color>
+    <color name="text_orange">#f7896e</color>
+
+    <color name="bg_line">#e3e3e3</color>
+    <color name="bg_gray_light">#f8f8f8</color>
+
+    <color name="commom_white">#ffffff</color>
+    <color name="commom_white_half">#7dffffff</color>
+    <color name="commom_green">#5daf56</color>
+    <color name="commom_green_quater">#405daf56</color>
+    <color name="commom_green_half">#8c5daf56</color>
+    <color name="theme_chatbg">#76d5f2ff</color>
+
+    <color name="commom_yellow">#f7b547</color>
+    <color name="commom_red">#ee827c</color>
+    <color name="commom_blue_light">#a1daff</color>
+    <!--<color name="theme_bottom">#6d7dc8</color>-->
+
+    //全透明颜色值
+    <color name="bg_transparent_half">#10000000</color>
+
+</resources>
