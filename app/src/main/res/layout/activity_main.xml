@@ -16,4 +16,10 @@
         android:onClick="toForm"
         android:text="Form" />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:onClick="toRealm"
+        android:text="Realm" />
+
 </LinearLayout>
