@@ -1,1 +1,1 @@
-include ':app', ':framework', ':dbgenerator'
+include ':app', ':framework'
