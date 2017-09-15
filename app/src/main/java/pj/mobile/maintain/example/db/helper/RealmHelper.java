@@ -34,6 +34,8 @@ public class RealmHelper {
             throw new RuntimeException("Please init realm with Application Context ! ");
         }
 
+        Realm.init(context);
+
         RealmMigration migration = RealmHelper::dealMigration;
 
         RealmConfiguration config = new RealmConfiguration.Builder()

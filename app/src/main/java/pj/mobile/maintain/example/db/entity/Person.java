@@ -58,10 +58,26 @@ public class Person extends RealmObject {
     }
 
     public RealmList<Dog> getDogs() {
+        if (dogs == null) {
+            dogs = new RealmList<>();
+        }
         return dogs;
     }
 
     public void setDogs(RealmList<Dog> dogs) {
-        this.dogs = dogs;
+        if (this.dogs == null) {
+            this.dogs = new RealmList<>();
+        }
+        this.dogs.clear();
+        this.dogs.addAll(dogs);
+    }
+
+    public String getDogsName() {
+        RealmList<Dog> ds = getDogs();
+        String dn = "";
+        for (Dog d : ds) {
+            dn += d.getName() + " , ";
+        }
+        return dn;
     }
 }

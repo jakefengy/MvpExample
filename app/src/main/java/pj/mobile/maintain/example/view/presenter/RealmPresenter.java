@@ -2,6 +2,8 @@ package pj.mobile.maintain.example.view.presenter;
 
 import android.content.Context;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 import io.reactivex.disposables.CompositeDisposable;
@@ -13,6 +15,7 @@ import pj.mobile.maintain.example.db.entity.Dog;
 import pj.mobile.maintain.example.db.entity.Person;
 import pj.mobile.maintain.example.db.helper.RealmHelper;
 import pj.mobile.maintain.example.view.contract.IRealmContract;
+import pj.mobile.maintain.example.view.entity.RealmEntity;
 
 public class RealmPresenter implements IRealmContract.Presenter {
 
@@ -113,4 +116,17 @@ public class RealmPresenter implements IRealmContract.Presenter {
     public void reset() {
         realm.delete(Person.class);
     }
+
+    @Override
+    public void reload() {
+        RealmResults<Person> persons = realm.where(Person.class).findAll();
+
+        List<RealmEntity> results = new ArrayList<>();
+        for (Person person : persons) {
+            results.add(new RealmEntity(person.getName() + " " + person.getDogsName()));
+        }
+
+        view.onGetPersons(true, "", results);
+    }
+
 }

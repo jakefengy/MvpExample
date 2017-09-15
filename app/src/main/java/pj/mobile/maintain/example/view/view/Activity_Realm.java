@@ -41,20 +41,18 @@ public class Activity_Realm extends BaseActivity implements IRealmContract.View,
         adapter = new RealmAdapter(Activity_Realm.this, null);
         adapter.setOnItemClickListener(this);
 
+        adapter.setSize(0);
         binding.refreshLayout.setAdapter(adapter);
         binding.refreshLayout.setCanLoadMore(false);
         binding.refreshLayout.setOnSwipeListener(new LoadMoreSwipeRefreshLayout.OnSwipeListener() {
             @Override
             public void onRefresh() {
                 adapter.resetIndex();
-                // TODO: onRefresh
-                // presenter.onRefresh(adapter.getIndex(), adapter.getSize());
+                presenter.reload();
             }
 
             @Override
             public void onLoadMore() {
-                // TODO: onLoadMore
-                // presenter.onLoadMore(adapter.getIndex(), adapter.getSize());
             }
         });
     }
@@ -71,19 +69,19 @@ public class Activity_Realm extends BaseActivity implements IRealmContract.View,
     }
 
     public void add(View v) {
-
+        presenter.add();
     }
 
     public void update(View v) {
-
+        presenter.update();
     }
 
     public void del(View v) {
-
+        presenter.del();
     }
 
     public void reset(View v) {
-
+        presenter.reset();
     }
 
     @Override
@@ -102,6 +100,8 @@ public class Activity_Realm extends BaseActivity implements IRealmContract.View,
     }
 
     // callback
-
-
+    @Override
+    public void onGetPersons(boolean success, String error, List<RealmEntity> realms) {
+        onGetDataComplete(success, realms);
+    }
 }
